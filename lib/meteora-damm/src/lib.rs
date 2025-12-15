@@ -1,8 +1,10 @@
 use anchor_gen::generate_cpi_crate;
 use hexlit::hex;
+use solana_program::pubkey;
 
 generate_cpi_crate!("./idl.json");
-declare_id!("Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB");
+
+pub const ID: Pubkey = pubkey!("24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi");
 
 pub fn encode_swap(amount_in: u64, min_amount_out: u64) -> Vec<u8> {
     let mut data = Vec::default();

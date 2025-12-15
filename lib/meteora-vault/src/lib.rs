@@ -1,7 +1,10 @@
 use anchor_gen::generate_cpi_crate;
+use anchor_lang::prelude::*;
+use solana_program::pubkey;
 
 generate_cpi_crate!("./idl.json");
-declare_id!("24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi");
+
+pub const ID: Pubkey = pubkey!("24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi");
 
 pub const LOCKED_PROFIT_DEGRADATION_DENOMINATOR: u128 = 1_000_000_000_000;
 
